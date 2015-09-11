@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<script type="text/javascript" src="jquery.js"></script>
+	<title>datalist</title>
+</head>
+<body>
+	<input name='name' list='xingming'/>
+	<input type="button" name="tijiao" value="提交"/>
+	<datalist id='xingming'>
+		<option value='zhangsan'>张三</option>
+		<option value="lisi">李四</option>
+		<option value="wangwu">王五</option>
+	</datalist>
+</body>
+
+<script>
+
+	/*
+	*	datalist定义选项列表
+	*	与Input配合使用
+	*/
+	$(function(){
+		var tijiao = $("input[name='tijiao']");
+		tijiao.on('click',function(){
+			var value = $("input[name='name']").val();
+			alert(value);
+		})
+	})
+</script>
+</html>
